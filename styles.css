@@ -1,2 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #eee;
+  display: flex;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 3rem;
+  font-weight: 900;
+}
+img {
+  max-width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin-right: 15px;
+}
+
+header nav ul a {
+  padding: 15px;
+}
+
+main {
+  display: flex;
+  margin-top: 30px;
+}
+
+main article {
+  padding: 0 15px;
+  margin-left: 30px;
+}
+
+main article h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+main article p {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+main aside {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 300px;
+}
+
+main aside {
+  padding: 15px;
+}
+
+main aside ul {
+  list-style: none;
+}
+
+main aside h2 {
+  padding-bottom: 15px;
+}
+
+main aside ul li {
+  padding-bottom: 15px;
+}
+footer {
+  background-color: #eee;
+  padding: 3px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 512px) {
+  main {
+    flex-direction: column;
+  }
+  main aside {
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  main article {
+    margin: 0;
+  }
 }
